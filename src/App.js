@@ -1,12 +1,13 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import NavBar from './component/navBar/navBar';
+import Lading from './pages/landing';
+
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
+     <Lading/>
     </div>
   );
 }
