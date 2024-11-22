@@ -1,3 +1,13 @@
 #ImgFr{
-   background: url('https://www.pexels.com/fr-fr/photo/homme-couple-femme-debout-25568845/');
-    }
+   background: url('../../image/banner.png') no-repeat center center/cover;
+   height: 100vh;
+
+   }
+
+    .card_pre{
+      transform:  translateY(-10%) !important;
+      }
+      .row-pre{
+         height:40vh;
+         background-color: bisque;
+         }

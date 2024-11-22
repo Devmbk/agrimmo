@@ -1,7 +1,12 @@
 
 .card_agri{
+        height: 100%;
         transform:  translateY(10%) !important;
         }
+        .card_elev{
+                height: 100%;
+                }
 .card_Immo{
-            transform:  translateY(20%) !important;
-            }
+        height: 100%;
+        transform:  translateY(20%) !important;
+        }

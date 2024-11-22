@@ -12,7 +12,7 @@ const Lading = () => {
      <div className="section">
      <Project/>
      </div>
-     <div className="section">
+     <div className="section d-flex justify-content-end">
      <ProjectEncours/>
      </div>
      
