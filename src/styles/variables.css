@@ -1,0 +1,51 @@
+:root {
+  /* Couleurs principales */
+  --primary-green: #27ae60;
+  --primary-green-light: #2ecc71;
+  --primary-green-dark: #229954;
+  
+  /* Couleurs secondaires */
+  --secondary-dark: #0d1a2b;
+  --secondary-dark-light: #1a2d42;
+  --secondary-gray: #2c3e50;
+  --secondary-gray-light: #34495e;
+  
+  /* Couleurs neutres */
+  --white: #ffffff;
+  --light-gray: #f8f9fa;
+  --medium-gray: #e9ecef;
+  --dark-gray: #0d1a2b;
+  
+  /* Couleurs de fond */
+  --bg-primary: linear-gradient(135deg, var(--secondary-dark) 0%, var(--secondary-dark-light) 100%);
+  --bg-green: linear-gradient(45deg, var(--primary-green) 0%, var(--primary-green-light) 100%);
+  --bg-green-reverse: linear-gradient(45deg, var(--primary-green-light) 0%, var(--primary-green) 100%);
+  
+  /* Couleurs avec transparence */
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-90: rgba(255, 255, 255, 0.9);
+  --white-95: rgba(255, 255, 255, 0.95);
+  
+  --green-10: rgba(39, 174, 96, 0.1);
+  --green-20: rgba(39, 174, 96, 0.2);
+  --green-30: rgba(39, 174, 96, 0.3);
+  --green-40: rgba(39, 174, 96, 0.4);
+  
+  /* Ombres */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 15px rgba(39, 174, 96, 0.3);
+  --shadow-lg: 0 8px 25px rgba(39, 174, 96, 0.4);
+  
+  /* Transitions */
+  --transition-fast: all 0.2s ease;
+  --transition-normal: all 0.3s ease;
+  --transition-slow: all 0.5s ease;
+  
+  /* Bordures */
+  --border-radius-sm: 10px;
+  --border-radius-md: 15px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 30px;
+  --border-radius-full: 50%;
+}

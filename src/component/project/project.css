@@ -1,12 +1,299 @@
 
-.card_agri{
-        height: 100%;
-        transform:  translateY(10%) !important;
-        }
-        .card_elev{
-                height: 100%;
-                }
-.card_Immo{
-        height: 100%;
-        transform:  translateY(20%) !important;
-        }
+@import '../../styles/variables.css';
+
+.project-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 50%, var(--light-gray) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23e0e0e0" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23e0e0e0" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="%23e0e0e0" opacity="0.1"/><circle cx="10" cy="90" r="1" fill="%23e0e0e0" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  pointer-events: none;
+}
+
+/* Header Section */
+.project-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.project-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--secondary-dark);
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.project-main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--bg-green);
+  border-radius: 2px;
+}
+
+.project-subtitle {
+  font-size: 1.3rem;
+  color: var(--secondary-gray);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Project Cards */
+.project-card {
+  background: var(--white);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+  position: relative;
+  border: 1px solid rgba(39, 174, 96, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-green);
+}
+
+/* Staggered Animation Effect */
+.project-card-1 {
+  animation: slideInUp 0.8s ease-out;
+}
+
+.project-card-2 {
+  animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.project-card-3 {
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image Container */
+.project-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-green);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-normal);
+}
+
+.project-card:hover .project-overlay {
+  opacity: 0.9;
+}
+
+.project-icon {
+  font-size: 3rem;
+  transform: scale(0);
+  transition: var(--transition-normal);
+}
+
+.project-card:hover .project-icon {
+  transform: scale(1);
+}
+
+/* Content */
+.project-content {
+  padding: 2rem;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--secondary-dark);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.project-description {
+  color: var(--secondary-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Features */
+.project-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--green-10);
+  color: var(--primary-green-dark);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--green-20);
+  transition: var(--transition-fast);
+}
+
+.feature-tag:hover {
+  background: var(--green-20);
+  transform: translateY(-2px);
+}
+
+.feature-tag i {
+  font-size: 0.8rem;
+  color: var(--primary-green);
+}
+
+/* Button */
+.project-btn {
+  width: 100%;
+  background: var(--bg-green);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-sm);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: var(--transition-normal);
+}
+
+.project-btn:hover::before {
+  left: 100%;
+}
+
+.project-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+.project-btn i {
+  transition: var(--transition-fast);
+}
+
+.project-btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-section {
+    padding: 3rem 0;
+  }
+  
+  .project-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .project-subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-main-title {
+    font-size: 2rem;
+  }
+  
+  .project-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .feature-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

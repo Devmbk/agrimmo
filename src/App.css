@@ -1,1 +1,90 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
+/* Variables CSS pour une cohérence des couleurs */
+:root {
+  --primary-color: #3fd335;
+  --secondary-color: #2c3e50;
+  --background-light: #f8f9fa;
+  --text-dark: #333;
+  --text-light: #666;
+}
+
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+/* Styles pour les sections */
+.section {
+  min-height: 80vh !important;
+  background-color: #D9D9D9;
+  margin-bottom: 5rem;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Amélioration de la responsivité */
+@media (max-width: 768px) {
+  .section {
+    min-height: 60vh !important;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+  }
+  
+  .col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .row-pre {
+    flex-direction: column;
+  }
+  
+  .card_pre {
+    transform: translateY(0%) !important;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Styles pour les boutons (si nécessaire) */
+.btn-primary-custom {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+  background-color: darken(var(--primary-color), 10%);
+  border-color: darken(var(--primary-color), 10%);
+  transform: translateY(-2px);
+}
